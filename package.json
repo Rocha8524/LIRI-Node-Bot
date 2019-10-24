@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/Rocha8524/LIRI-Node-Bot#readme",
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "axios": "^0.19.0",
+    "dotenv": "^8.2.0",
+    "node-spotify-api": "^1.1.1"
   }
 }
