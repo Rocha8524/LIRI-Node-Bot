@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Rocha8524/LIRI-Node-Bot/issues"
   },
-  "homepage": "https://github.com/Rocha8524/LIRI-Node-Bot#readme"
+  "homepage": "https://github.com/Rocha8524/LIRI-Node-Bot#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
 }
