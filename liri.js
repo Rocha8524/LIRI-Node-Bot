@@ -3,6 +3,10 @@ require("dotenv").config();
 
 // Include the axios npm package
 var axios = require("axios");
+var bandsInTown = require("axios");
+
+// Variable for Concert-This portion of LIRI
+var concertThis = "";
 
 var keys = require("./keys.js");
 
@@ -26,10 +30,13 @@ for (var i = 2; i < multiples.length; i++) {
 }
 
 // Run a request with axios to the OMDB API with the movie specified
-var queryUrl = "http://www.omdbapi.com/?t=" + movieThis + "&y=&plot=short&apikey=trilogy";
+var movieUrl = "http://www.omdbapi.com/?t=" + movieThis + "&y=&plot=short&apikey=trilogy";
 
-// Create a request with axios to the queryUrl
-axios.get(queryUrl).then(
+// Create a request with axios to the movieUrl
+axios.get(movieUrl).then(
+
+    // If user doesn't type in a movie in node 
+
 
     // If the request with axios is successful
     function (response) {
@@ -51,3 +58,19 @@ axios.get(queryUrl).then(
         // Actors in the movie.
         console.log("The movie " + movieThis + " main actors are " + response.data.Actors);
     });
+
+// Run a request with axios to the Bands In Town API with the artist and band specified
+var concertUrl = "https://rest.bandsintown.com/artists/" + concertThis + "/events?app_id=codingbootcamp";
+
+// Create a request with axios to the concertUrl
+bandsInTown.get(concertUrl).then (
+
+        // If the request with axios is successful
+        function (music) {
+
+            // Name of the venue
+            console.log("The " + concertThis + " next performance is at the " + music.venue.name);
+
+            // Location of the venue
+
+        });
