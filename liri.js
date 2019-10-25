@@ -10,7 +10,7 @@ var keys = require("./keys.js");
 var spotify = new Spotify(keys.spotify);
 */
 
-// Variable for OMBd portion of LIRI
+// Variable for OMBD portion of LIRI
 var movieThis = "";
 
 // Store all arguments in an array
@@ -34,7 +34,20 @@ axios.get(queryUrl).then(
     // If the request with axios is successful
     function (response) {
 
-        // Console log information for the movie typed in node.
+        // Title of the movie.
         console.log("The title of the movie is " + movieThis);
+        // Year the movie came out.
         console.log("The movie " + movieThis + " was released in " + response.data.Year);
+        // IMDB Rating of the movie.
+        console.log("The movie " + movieThis + " IMBD rating is " + response.data.imdbRating);
+        // Rotten Tomatoes Rating of the movie.
+        console.log("The movie " + movieThis + " rotten tomatoes score is " + response.data.Ratings[1].Value);
+        // Country where the movie was produced.
+        console.log("The movie " + movieThis + " was produced in " + response.data.Country);
+        // Language of the movie.
+        console.log("The movie " + movieThis + " spoken language is " + response.data.Language);
+        // Plot of the movie.
+        console.log(movieThis + " synopsis: " + response.data.Plot);
+        // Actors in the movie.
+        console.log("The movie " + movieThis + " main actors are " + response.data.Actors);
     });
