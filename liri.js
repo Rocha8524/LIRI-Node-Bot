@@ -51,6 +51,7 @@ function movieThis() {
         userInput = "Mr. Nobody";
     }
 
+    // Variable for OMBD url
     var movieUrl = "http://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=trilogy";
 
     // Create a request with axios to the movieUrl
@@ -75,19 +76,27 @@ function movieThis() {
     });
 }
 
-/* Run a request with axios to the Bands In Town API with the artist and band specified
-var concertUrl = "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp";
+// Run a request with axios to the Bands In Town API with the artist and band specified
+function concertThis() {
 
-// Create a request with axios to the concertUrl
-bandsInTown.get(concertUrl).then(
+    // If user doesn't type in a artist in node 
+    if (userInput === undefined) {
+        userInput = "Childish Gambino";
+    }
 
-    // If the request with axios is successful
-    function (music) {
+    // Variable for Bands in Town url
+    var concertUrl = "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp";
+
+    // Create a request with axios to the concertUrl
+    axios.get(concertUrl).then(function (response) {
 
         // Name of the venue
-        console.log("The " + userInput + " next performance is at the " + music.venue.name);
+        console.log(userInput + " next performance is at the " + response.data.venue);
 
         // Location of the venue
+        console.log(userInput + " next performance is at the " + response);
 
+        // Date of the event
+        console.log(userInput + " next performance is at the " + response);
     });
-*/
+}
