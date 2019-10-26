@@ -75,68 +75,7 @@ function movieThis() {
     });
 }
 
-
-/*
-
-    // Store all arguments in an array
-var command = process.argv[2];
-var userInput = process.argv[3];
-
-// We will then create a switch-case statement (if-else would also work).
-// The switch-case will direct which function gets run.
-switch (command) {
-    case "movie-this":
-        movieThis();
-        break;
-
-    case "concert-this":
-        concertThis();
-        break;
-
-    case "spotify-this-song":
-        spotifySong();
-        break;
-
-    case "do-what-it-says":
-        doIt();
-        break;
-}
-
-// Run a request with axios to the OMDB API with the movie specified
-function movieThis() {
-
-    // If user doesn't type in a movie in node
-    if (userInput === null) {
-        userInput = "Mr. Nobody";
-    }
-
-    request("http://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=trilogy", function (error, response) {
-
-        // If the request with axios is successful
-        if (error) {
-            return console.log(error);
-        }
-
-        // Title of the movie.
-        console.log("The title of the movie is " + userInput);
-        // Year the movie came out.
-        console.log("The movie " + userInput + " was released in " + response.data.Year);
-        // IMDB Rating of the movie.
-        console.log("The movie " + userInput + " IMBD rating is " + response.data.imdbRating);
-        // Rotten Tomatoes Rating of the movie.
-        console.log("The movie " + userInput + " rotten tomatoes score is " + response.data.Ratings[1].Value);
-        // Country where the movie was produced.
-        console.log("The movie " + userInput + " was produced in " + response.data.Country);
-        // Language of the movie.
-        console.log("The movie " + userInput + " spoken language is " + response.data.Language);
-        // Plot of the movie.
-        console.log(userInput + " synopsis: " + response.data.Plot);
-        // Actors in the movie.
-        console.log("The movie " + userInput + " main actors are " + response.data.Actors);
-    });
-}
-
-// Run a request with axios to the Bands In Town API with the artist and band specified
+/* Run a request with axios to the Bands In Town API with the artist and band specified
 var concertUrl = "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp";
 
 // Create a request with axios to the concertUrl
