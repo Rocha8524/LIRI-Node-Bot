@@ -11,7 +11,7 @@ var moment = require("moment");
 var keys = require("./keys.js");
 
 // Variable for Spotify portion of LIRI
-// var spotify = new Spotify(keys.spotify);
+var spotifyAPI = require("node-spotify-api");
 
 // Store all arguments in an array
 var commands = process.argv[2];
@@ -48,7 +48,12 @@ function movieThis() {
     var movieUrl = "http://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=trilogy";
 
     // Create a request with axios to the movieUrl
-    axios.get(movieUrl).then(function (response) {
+    axios.get(movieUrl).then(function (error , response) {
+
+        // If an error occurs
+        if (error) {
+            return console.log("Error: Move information not available");
+        }
 
         // Title of the movie.
         console.log("The title of the movie is " + userInput);
@@ -73,23 +78,68 @@ function movieThis() {
 function concertThis() {
 
     // If user doesn't type in a artist in node 
-    if (userInput === undefined) {
-        userInput = "Childish Gambino";
+    if (!userInput) {
+        userInput = "Nick Offerman";
     }
 
     // Variable for Bands in Town url
     var concertUrl = "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp";
 
     // Create a request with axios to the concertUrl
-    axios.request(concertUrl).then(function (response) {
+    axios.get(concertUrl).then(function (error , response) {
+
+        // If an error occurs
+        if (error) {
+            return console.log("Error: Concert information not available");
+        }
 
         // Name of the venue
         console.log(userInput + " next performance is at the " + response.data[0].venue.name);
 
-        // Location of the venue
-        console.log(userInput + " next performance is at the " + response.data[0].venue.city);
+        // City of the concert
+        console.log(userInput + " performance is in the city of " + response.data[0].venue.city);
+
+        // State where the concert is held
+        console.log(userInput + " performance is in the state of " + response.data[0].venue.region);
 
         // Date of the event
-        console.log(userInput + " next performance is at the " + moment(response.data[0].datetime).format("MM/DD/YYYY"));
+        console.log(userInput + " next performance is on " + moment(response.data[0].datetime).format("MM/DD/YYYY"));
     });
 }
+
+// Run a request with spotify with the artist and band specified
+function spotifySong() {
+
+    // If user doesn't type in a song
+    if (!userInput) {
+        userInput = "The Sign";
+    }
+
+    // Variable for user api spotify keys
+    var spotify = new spotifyAPI(keys.spotify);
+
+    // Create a request with spotify to concole log song
+    spotify.search({ type: "track", query: userInput }, function (error, data) {
+
+        // If an error occurs
+        if (error) {
+            return console.log("Error: Music information not available");
+        }
+
+        // Name of the artist of the song
+        console.log("The name of the artist is " + data.tracks.items[0].album.artists[0].name);
+
+        // Name of the song
+        console.log("The name of the song is " + data.tracks.items[0].name);
+
+        // Preview link to the song
+        console.log("Here is the preview link to the song: " + data.tracks.items[0].href);
+
+        // The album that the song is from
+        console.log(userInput + " is from the album " + data.tracks.items[0].album.name);
+    });
+}
+
+function justDoIt() {
+
+};
