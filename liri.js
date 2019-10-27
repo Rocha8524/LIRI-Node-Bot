@@ -59,6 +59,8 @@ function movieThis() {
             return console.log("Error: Move information not available");
         }
 
+        // Create space for information
+        console.log("-------------------------------------");
         // Title of the movie.
         console.log("The title of the movie is " + userInput);
         // Year the movie came out.
@@ -75,6 +77,8 @@ function movieThis() {
         console.log(userInput + " synopsis: " + response.data.Plot);
         // Actors in the movie.
         console.log("The movie " + userInput + " main actors are " + response.data.Actors);
+        // Create space for information
+        console.log("-------------------------------------");
     });
 }
 
@@ -97,17 +101,18 @@ function concertThis() {
             return console.log("Error: Concert information not available");
         }
 
+        // Create space for information
+        console.log("-------------------------------------");
         // Name of the venue
         console.log(userInput + " next performance is at the " + response.data[0].venue.name);
-
         // City of the concert
         console.log(userInput + " performance is in the city of " + response.data[0].venue.city);
-
         // State where the concert is held
         console.log(userInput + " performance is in the state of " + response.data[0].venue.region);
-
         // Date of the event
         console.log(userInput + " next performance is on " + moment(response.data[0].datetime).format("MM/DD/YYYY"));
+        // Create space for information
+        console.log("-------------------------------------");
     });
 }
 
@@ -130,17 +135,18 @@ function spotifySong() {
             return console.log("Error: Music information not available");
         }
 
+        // Create space for information
+        console.log("-------------------------------------");
         // Name of the artist of the song
         console.log("The name of the artist is " + data.tracks.items[0].album.artists[0].name);
-
         // Name of the song
         console.log("The name of the song is " + data.tracks.items[0].name);
-
         // Preview link to the song
         console.log("Here is the preview link to the song: " + data.tracks.items[0].href);
-
         // The album that the song is from
         console.log(userInput + " is from the album " + data.tracks.items[0].album.name);
+        // Create space for information
+        console.log("-------------------------------------");
     });
 }
 
@@ -151,13 +157,14 @@ function justDoIt() {
     fs.readFile("random.txt", "utf8", function (error, data) {
 
         // Then split it by commas (to make it more readable)
-        var dataArray = data.split(",");
+        var dataArray = data;
 
         // If the code experiences any errors it will log the error to the console.
         if (error) {
             return console.log("Error: Your command didn't work");
         } else {
-            spotifySong(dataArray[1]);
+            console.log(dataArray);
+            spotifySong(userInput = "I want it that way");
         }
     });
 };
