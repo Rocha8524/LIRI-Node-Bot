@@ -13,6 +13,9 @@ var keys = require("./keys.js");
 // Variable for Spotify portion of LIRI
 var spotifyAPI = require("node-spotify-api");
 
+// Variable for fs text portion of LIRI
+var fs = require("fs");
+
 // Store all arguments in an array
 var commands = process.argv[2];
 var userInput = process.argv.slice(3).join(" ");
@@ -20,6 +23,7 @@ var userInput = process.argv.slice(3).join(" ");
 // We will then create a switch-case statement (if-else would also work).
 // The switch-case will direct which function gets run.
 switch (commands) {
+
     case "movie-this":
         movieThis();
         break;
@@ -32,7 +36,7 @@ switch (commands) {
         spotifySong();
         break;
 
-    case "do-what-it-says":
+    case "just-do-it":
         justDoIt();
         break;
 }
@@ -48,7 +52,7 @@ function movieThis() {
     var movieUrl = "http://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=trilogy";
 
     // Create a request with axios to the movieUrl
-    axios.get(movieUrl).then(function (error , response) {
+    axios.get(movieUrl).then(function (error, response) {
 
         // If an error occurs
         if (error) {
@@ -86,7 +90,7 @@ function concertThis() {
     var concertUrl = "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp";
 
     // Create a request with axios to the concertUrl
-    axios.get(concertUrl).then(function (error , response) {
+    axios.get(concertUrl).then(function (error, response) {
 
         // If an error occurs
         if (error) {
@@ -140,6 +144,20 @@ function spotifySong() {
     });
 }
 
+// Function to grab text from random.txt file
 function justDoIt() {
 
+    // The code will store the contents of the reading inside the variable "data"
+    fs.readFile("random.txt", "utf8", function (error, data) {
+
+        // Then split it by commas (to make it more readable)
+        var dataArray = data.split(",");
+
+        // If the code experiences any errors it will log the error to the console.
+        if (error) {
+            return console.log("Error: Your command didn't work");
+        } else {
+            spotifySong(dataArray[1]);
+        }
+    });
 };
