@@ -4,6 +4,9 @@ require("dotenv").config();
 // Include the axios npm package
 var axios = require("axios");
 
+// Include moment npm package
+var moment = require("moment");
+
 // Variable for keys js file
 var keys = require("./keys.js");
 
@@ -12,17 +15,7 @@ var keys = require("./keys.js");
 
 // Store all arguments in an array
 var commands = process.argv[2];
-var userInput = process.argv[3];
-
-/* Loop through all the words and do a for-loop to handle the inclusion of multiple words
-for (var i = 2; i < multiples.length; i++) {
-    if (i > 2 && i < multiples.length) {
-        userInput = userInput + " " + multiples[i];
-    } else {
-        userInput += multiples[i];
-    }
-}
-*/
+var userInput = process.argv.slice(3).join(" ");
 
 // We will then create a switch-case statement (if-else would also work).
 // The switch-case will direct which function gets run.
@@ -40,7 +33,7 @@ switch (commands) {
         break;
 
     case "do-what-it-says":
-        doIt();
+        justDoIt();
         break;
 }
 // Run a request with axios to the OMDB API with the movie specified
@@ -88,15 +81,15 @@ function concertThis() {
     var concertUrl = "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp";
 
     // Create a request with axios to the concertUrl
-    axios.get(concertUrl).then(function (response) {
+    axios.request(concertUrl).then(function (response) {
 
         // Name of the venue
-        console.log(userInput + " next performance is at the " + response.data.venue);
+        console.log(userInput + " next performance is at the " + response.data[0].venue.name);
 
         // Location of the venue
-        console.log(userInput + " next performance is at the " + response);
+        console.log(userInput + " next performance is at the " + response.data[0].venue.city);
 
         // Date of the event
-        console.log(userInput + " next performance is at the " + response);
+        console.log(userInput + " next performance is at the " + moment(response.data[0].datetime).format("MM/DD/YYYY"));
     });
 }
