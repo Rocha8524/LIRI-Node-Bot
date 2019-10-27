@@ -157,14 +157,13 @@ function justDoIt() {
     fs.readFile("random.txt", "utf8", function (error, data) {
 
         // Then split it by commas (to make it more readable)
-        var dataArray = data;
+        var dataArray = data.split(",");
 
         // If the code experiences any errors it will log the error to the console.
         if (error) {
             return console.log("Error: Your command didn't work");
         } else {
-            console.log(dataArray);
-            spotifySong(userInput = "I want it that way");
+            spotifySong(userInput = dataArray[1]);
         }
     });
 };
