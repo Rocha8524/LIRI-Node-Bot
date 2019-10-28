@@ -59,21 +59,27 @@ function movieThis() {
         // Title of the movie.
         console.log("The title of the movie is " + userInput);
         // Year the movie came out.
-        console.log("The movie " + userInput + " was released in " + response.data.Year);
+        console.log(userInput + " was released in " + response.data.Year);
         // IMDB Rating of the movie.
-        console.log("The movie " + userInput + " IMBD rating is " + response.data.imdbRating);
+        console.log(userInput + " IMBD rating is " + response.data.imdbRating);
         // Rotten Tomatoes Rating of the movie.
-        console.log("The movie " + userInput + " rotten tomatoes score is " + response.data.Ratings[1].Value);
+        console.log(userInput + " rotten tomatoes score is " + response.data.Ratings[1].Value);
         // Country where the movie was produced.
-        console.log("The movie " + userInput + " was produced in " + response.data.Country);
+        console.log(userInput + " was produced in " + response.data.Country);
         // Language of the movie.
-        console.log("The movie " + userInput + " spoken language is " + response.data.Language);
+        console.log(userInput + " spoken language is " + response.data.Language);
         // Plot of the movie.
         console.log(userInput + " synopsis: " + response.data.Plot);
         // Actors in the movie.
-        console.log("The movie " + userInput + " main actors are " + response.data.Actors);
+        console.log(userInput + " main actors are " + response.data.Actors);
         // Create space for information
         console.log("-------------------------------------");
+
+        var logMovie = ("\n\n------Movie Log Entry------") + "\nThe title of the movie is " + userInput + "\n" + userInput + " was released in " + response.data.Year + "\n" + userInput + " IMBD rating is " + response.data.imdbRating + "\n" + userInput + " rotten tomatoes score is " + response.data.Ratings[1].Value + "\n" + userInput + " was produced in " + response.data.Country + "\n" + userInput + " spoken language is " + response.data.Language + "\n" + userInput + " synopsis: " + response.data.Plot + "\n" + userInput + " main actors are " + response.data.Actors;
+
+        fs.appendFile("log.txt", logMovie, function (error) {
+            if (error) throw error;
+        });
     });
 }
 
@@ -103,6 +109,12 @@ function concertThis() {
         console.log(userInput + " next performance is on " + moment(response.data[0].datetime).format("MM/DD/YYYY"));
         // Create space for information
         console.log("-------------------------------------");
+
+        var logConcert = ("\n\n------Concert Log Entry------") + "\n" + userInput + " next performance is at the " + response.data[0].venue.name + "\n" + userInput + " performance is in the city of " + response.data[0].venue.city + "\n" + userInput + " performance is in the state of " + response.data[0].venue.region + "\n" + userInput + " next performance is on " + moment(response.data[0].datetime).format("MM/DD/YYYY");
+
+        fs.appendFile("log.txt", logConcert, function (error) {
+            if (error) throw error;
+        });
     });
 }
 
@@ -137,6 +149,12 @@ function spotifySong() {
         console.log(userInput + " is from the album " + data.tracks.items[0].album.name);
         // Create space for information
         console.log("-------------------------------------");
+
+        var logSpotify = ("\n\n------Spotify Log Entry------") + "\n" + userInput + " next performance is at the " + response.data[0].venue.name + "\n" + userInput + " performance is in the city of " + response.data[0].venue.city + "\n" + userInput + " performance is in the state of " + response.data[0].venue.region + "\n" + userInput + " next performance is on " + moment(response.data[0].datetime).format("MM/DD/YYYY");
+
+        fs.appendFile("log.txt", logSpotify, function (error) {
+            if (error) throw error;
+        });
     });
 }
 
