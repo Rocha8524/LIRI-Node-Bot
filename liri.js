@@ -150,7 +150,7 @@ function spotifySong() {
         // Create space for information
         console.log("-------------------------------------");
 
-        var logSpotify = ("\n\n------Spotify Log Entry------") + "\n" + userInput + " next performance is at the " + response.data[0].venue.name + "\n" + userInput + " performance is in the city of " + response.data[0].venue.city + "\n" + userInput + " performance is in the state of " + response.data[0].venue.region + "\n" + userInput + " next performance is on " + moment(response.data[0].datetime).format("MM/DD/YYYY");
+        var logSpotify = ("\n\n------Spotify Log Entry------") + "\n" + "The name of the artist is " + data.tracks.items[0].album.artists[0].name + "\n" + "The name of the song is " + data.tracks.items[0].name + "\n" + "Here is the preview link to the song: " + data.tracks.items[0].href + "\n" + userInput + " is from the album " + data.tracks.items[0].album.name;
 
         fs.appendFile("log.txt", logSpotify, function (error) {
             if (error) throw error;

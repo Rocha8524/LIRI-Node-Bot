@@ -15,3 +15,21 @@ Celine Dion next performance is at the Sprint Center
 Celine Dion performance is in the city of Kansas City
 Celine Dion performance is in the state of MO
 Celine Dion next performance is on 10/28/2019
+
+------Concert Log Entry------
+Nick Offerman next performance is at the John F. Kennedy Center for the Performing Arts
+Nick Offerman performance is in the city of Washington
+Nick Offerman performance is in the state of DC
+Nick Offerman next performance is on 11/01/2019
+
+------Spotify Log Entry------
+The name of the artist is Childish Gambino
+The name of the song is Feels Like Summer
+Here is the preview link to the song: https://api.spotify.com/v1/tracks/7p4vHnYXkxlzvfePJVpcTr
+Feels Like Summer is from the album Summer Pack
+
+------Spotify Log Entry------
+The name of the artist is Backstreet Boys
+The name of the song is I Want It That Way
+Here is the preview link to the song: https://api.spotify.com/v1/tracks/6e40mgJiCid5HRAGrbpGA6
+"I Want it That Way" is from the album The Hits--Chapter One
