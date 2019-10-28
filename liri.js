@@ -56,7 +56,7 @@ function movieThis() {
 
         // If an error occurs
         if (error) {
-            return console.log("Error: Move information not available");
+            return console.log("Error: Movie information not available");
         }
 
         // Create space for information
@@ -163,7 +163,7 @@ function justDoIt() {
         if (error) {
             return console.log("Error: Your command didn't work");
         } else {
-            spotifySong(userInput = dataArray[1]);
+            spotifySong(commands = dataArray[0], userInput = dataArray[1]);
         }
     });
 };
