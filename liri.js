@@ -52,12 +52,7 @@ function movieThis() {
     var movieUrl = "http://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=trilogy";
 
     // Create a request with axios to the movieUrl
-    axios.get(movieUrl).then(function (error, response) {
-
-        // If an error occurs
-        if (error) {
-            return console.log("Error: Movie information not available");
-        }
+    axios.get(movieUrl).then(function (response) {
 
         // Create space for information
         console.log("-------------------------------------");
@@ -94,12 +89,7 @@ function concertThis() {
     var concertUrl = "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp";
 
     // Create a request with axios to the concertUrl
-    axios.get(concertUrl).then(function (error, response) {
-
-        // If an error occurs
-        if (error) {
-            return console.log("Error: Concert information not available");
-        }
+    axios.get(concertUrl).then(function (response) {
 
         // Create space for information
         console.log("-------------------------------------");
@@ -166,4 +156,4 @@ function justDoIt() {
             spotifySong(commands = dataArray[0], userInput = dataArray[1]);
         }
     });
-};
+}
