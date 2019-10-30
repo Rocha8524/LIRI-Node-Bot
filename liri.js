@@ -44,7 +44,7 @@ switch (commands) {
 function movieThis() {
 
     // If user doesn't type in a movie in node 
-    if (userInput === undefined) {
+    if (!userInput) {
         userInput = "Mr. Nobody";
     }
 
