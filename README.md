@@ -18,7 +18,7 @@ command: node liri.js movie-this <name of a movie><br>
 2. concert-this:<br>
 Retrieves concert information for a performer. If no argument is passed, it automatically defaults to "Nick Offerman".<br>
 command: node liri.js concert-this <performer's name><br>
-[![Concert-This]("https://img.youtube.com/watch?v=xrtIy0prtaw/0.jpg)]("https://www.youtube.com/watch?v=xrtIy0prtaw&feature=youtu.be)
+[![Concert-This]("https://img.youtube.com/watch?v=xrtIy0prtaw&feature=youtu.be/0.jpg)]("https://www.youtube.com/watch?v=xrtIy0prtaw&feature=youtu.be)
 
 3. spotify-this-song:<br>
 Retrieves song information for a track. If no argument is passed, song defaults to "The Sign" by Ace of Base.<br>
