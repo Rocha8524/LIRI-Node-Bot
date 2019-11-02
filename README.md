@@ -12,7 +12,7 @@ What Each Command Does:<br>
 
 1. movie-this:<br>
 Retrieves movie information for a movie. If no argument is passed, movie defaults to "Mr. Nobody".<br>
-command: node liri.js movie-this <name of a movie>.<br>
+command: node liri.js movie-this <name of a movie><br>
 <video width="320" height="240" controls>
   <video src="Movie-This.mp4" type="video/mp4">
 </video>
