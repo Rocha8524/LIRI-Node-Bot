@@ -1,1 +1,51 @@
 LIRI-Node-Bot Entries
+
+------Movie Log Entry------
+The title of the movie is Joker
+Joker was released in 2019
+Joker IMBD rating is 8.9
+Joker rotten tomatoes score is 68%
+Joker was produced in USA, Canada
+Joker spoken language is English
+Joker synopsis: In Gotham City, mentally-troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: "The Joker".
+Joker main actors are Joaquin Phoenix, Robert De Niro, Zazie Beetz, Frances Conroy
+
+------Movie Log Entry------
+The title of the movie is Mr. Nobody
+Mr. Nobody was released in 2009
+Mr. Nobody IMBD rating is 7.8
+Mr. Nobody rotten tomatoes score is 67%
+Mr. Nobody was produced in Belgium, Germany, Canada, France, USA, UK
+Mr. Nobody spoken language is English, Mohawk
+Mr. Nobody synopsis: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Mr. Nobody main actors are Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+------Concert Log Entry------
+Celine Dion next performance is at the Fargodome
+Celine Dion performance is in the city of Fargo
+Celine Dion performance is in the state of ND
+Celine Dion next performance is on 10/30/2019
+
+------Concert Log Entry------
+Nick Offerman next performance is at the John F. Kennedy Center for the Performing Arts
+Nick Offerman performance is in the city of Washington
+Nick Offerman performance is in the state of DC
+Nick Offerman next performance is on 11/01/2019
+
+------Spotify Log Entry------
+The name of the artist is Childish Gambino
+The name of the song is Feels Like Summer
+Here is the preview link to the song: https://api.spotify.com/v1/tracks/7p4vHnYXkxlzvfePJVpcTr
+Feels like summer is from the album Summer Pack
+
+------Spotify Log Entry------
+The name of the artist is Harry Styles
+The name of the song is Sign of the Times
+Here is the preview link to the song: https://api.spotify.com/v1/tracks/5Ohxk2dO5COHF1krpoPigN
+The Sign is from the album Harry Styles
+
+------Spotify Log Entry------
+The name of the artist is Backstreet Boys
+The name of the song is I Want It That Way
+Here is the preview link to the song: https://api.spotify.com/v1/tracks/6e40mgJiCid5HRAGrbpGA6
+"I Want it That Way" is from the album The Hits--Chapter One
