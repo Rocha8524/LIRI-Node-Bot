@@ -14,21 +14,21 @@ What Each Command Does:<br>
 Retrieves movie information for a movie. If no argument is passed, movie defaults to "Mr. Nobody".<br>
 command: node liri.js movie-this <name of a movie>.<br>
 <video width="320" height="240" controls>
-  <source src="Movie-This.mp4" type="video/mp4">
+  <video src="Movie-This.mp4" type="video/mp4">
 </video>
   
 2. concert-this:<br>
 Retrieves concert information for a performer. If no argument is passed, it automatically defaults to "Nick Offerman".<br>
 command: node liri.js concert-this <performer's name><br>
 <video width="320" height="240" controls>
-  <source src="Concert-This.mp4" type="video/mp4">
+  <video src="Concert-This.mp4" type="video/mp4">
 </video>
 
 3. spotify-this-song:<br>
 Retrieves song information for a track. If no argument is passed, song defaults to "The Sign" by Ace of Base.<br>
 command: node liri.js spotify-this-song <name of a song><br>
 <video width="320" height="240" controls>
-  <source src="Spotify-This-Song.mp4" type="video/mp4">
+  <video src="Spotify-This-Song.mp4" type="video/mp4">
 </video>
 
 
@@ -36,6 +36,5 @@ command: node liri.js spotify-this-song <name of a song><br>
 Takes info from random.txt ("I want it that way") and performs spotify-this-song:<br>
 command: node liri.js just-do-it.<br>
 <video width="320" height="240" controls>
-  <source src="Just-Do-It.mp4" type="video/mp4">
+  <video src="Just-Do-It.mp4" type="video/mp4">
 </video>
-
