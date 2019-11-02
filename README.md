@@ -13,7 +13,7 @@ What Each Command Does:<br>
 1. movie-this:<br>
 Retrieves movie information for a movie. If no argument is passed, movie defaults to "Mr. Nobody".<br>
 command: node liri.js movie-this <name of a movie><br>
-[![Movie-This](https://www.youtube.com/watch?v=udE4TvCc3K4)
+[![Movie-This](https://img.youtube.com/vi/udE4TvCc3K4/0.jpg)](https://www.youtube.com/watch?v=udE4TvCc3K4)
   
 2. concert-this:<br>
 Retrieves concert information for a performer. If no argument is passed, it automatically defaults to "Nick Offerman".<br>
@@ -23,7 +23,7 @@ command: node liri.js concert-this <performer's name><br>
 3. spotify-this-song:<br>
 Retrieves song information for a track. If no argument is passed, song defaults to "The Sign" by Ace of Base.<br>
 command: node liri.js spotify-this-song <name of a song><br>
-[![Spotify-This-Song](https://www.youtube.com/watch?v=_KQtwcKxsrg)
+[![Spotify-This-Song](https://img.youtube.com/vi/KQtwcKxsrg/0.jpg)](https://www.youtube.com/watch?v=_KQtwcKxsrg)
 
 
 4. just-do-it:<br>
