@@ -23,7 +23,7 @@ command: node liri.js concert-this <performer's name><br>
 3. spotify-this-song:<br>
 Retrieves song information for a track. If no argument is passed, song defaults to "The Sign" by Ace of Base.<br>
 command: node liri.js spotify-this-song <name of a song><br>
-[![Spotify-This-Song](https://img.youtube.com/vi/KQtwcKxsrg/0.jpg)](https://www.youtube.com/watch?v=_KQtwcKxsrg)
+[![Spotify-This-Song](https://img.youtube.com/vi/_KQtwcKxsrg/0.jpg)](https://www.youtube.com/watch?v=_KQtwcKxsrg)
 
 
 4. just-do-it:<br>
