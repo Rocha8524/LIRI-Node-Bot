@@ -29,4 +29,4 @@ command: node liri.js spotify-this-song <name of a song><br>
 4. just-do-it:<br>
 Takes info from random.txt ("I want it that way") and performs spotify-this-song:<br>
 command: node liri.js just-do-it.<br>
-[![Just-Do-It](https://img.youtube.com/vi/Ae415NnSyD0&t=7s/0.jpg)](https://www.youtube.com/watch?v=Ae415NnSyD0)
+[![Just-Do-It](https://img.youtube.com/vi/Ae415NnSyD0/0.jpg)](https://www.youtube.com/watch?v=Ae415NnSyD0)
