@@ -75,6 +75,7 @@ function movieThis() {
         // Create space for information
         console.log("-------------------------------------");
 
+        // Log information into text file
         var logMovie = ("\n\n------Movie Log Entry------") + "\nThe title of the movie is " + userInput + "\n" + userInput + " was released in " + response.data.Year + "\n" + userInput + " IMBD rating is " + response.data.imdbRating + "\n" + userInput + " rotten tomatoes score is " + response.data.Ratings[1].Value + "\n" + userInput + " was produced in " + response.data.Country + "\n" + userInput + " spoken language is " + response.data.Language + "\n" + userInput + " synopsis: " + response.data.Plot + "\n" + userInput + " main actors are " + response.data.Actors;
 
         fs.appendFile("log.txt", logMovie, function (error) {
@@ -110,6 +111,7 @@ function concertThis() {
         // Create space for information
         console.log("-------------------------------------");
 
+        // Log information into text file
         var logConcert = ("\n\n------Concert Log Entry------") + "\n" + userInput + " next performance is at the " + response.data[0].venue.name + "\n" + userInput + " performance is in the city of " + response.data[0].venue.city + "\n" + userInput + " performance is in the state of " + response.data[0].venue.region + "\n" + userInput + " next performance is on " + moment(response.data[0].datetime).format("MM/DD/YYYY");
 
         fs.appendFile("log.txt", logConcert, function (error) {
@@ -150,6 +152,7 @@ function spotifySong() {
         // Create space for information
         console.log("-------------------------------------");
 
+        // Log information into text file
         var logSpotify = ("\n\n------Spotify Log Entry------") + "\n" + "The name of the artist is " + data.tracks.items[0].album.artists[0].name + "\n" + "The name of the song is " + data.tracks.items[0].name + "\n" + "Here is the preview link to the song: " + data.tracks.items[0].href + "\n" + userInput + " is from the album " + data.tracks.items[0].album.name;
 
         fs.appendFile("log.txt", logSpotify, function (error) {

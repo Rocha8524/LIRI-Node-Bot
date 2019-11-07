@@ -49,3 +49,9 @@ The name of the artist is Backstreet Boys
 The name of the song is I Want It That Way
 Here is the preview link to the song: https://api.spotify.com/v1/tracks/6e40mgJiCid5HRAGrbpGA6
 "I Want it That Way" is from the album The Hits--Chapter One
+
+------Spotify Log Entry------
+The name of the artist is Backstreet Boys
+The name of the song is I Want It That Way
+Here is the preview link to the song: https://api.spotify.com/v1/tracks/6e40mgJiCid5HRAGrbpGA6
+"I Want it That Way" is from the album The Hits--Chapter One
